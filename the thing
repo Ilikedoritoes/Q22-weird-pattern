@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void main()
+{
+	int N, num = 1, st, end;
+	printf("please write an uneven number...\n");
+	scanf("%d", &N);
+	int middle = N/2;
+
+	for (st = 1;st <= middle;st++)
+	{
+		for (end = N;end >= middle;end--)
+		{ 
+			for (num = st;num < end;num++)
+			{
+				printf("%d ", num);
+			}
+			printf("\n");
+		}
+		
+	}
+	for (st = middle;st >= 1;st--)
+	{
+		for (end = middle;end <= N;end++)
+		{
+			for (num = middle;num < end;num++)
+			{
+				printf("%d ", num);
+			}
+
+		}
+		printf("\n");
+	}
+
+
+}
